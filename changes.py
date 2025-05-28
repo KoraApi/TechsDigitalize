@@ -20,12 +20,8 @@ cursor = conn.cursor()
 # Renombrar tablas
 try:
     
-        # Eliminar tablas
-    cursor.execute("DROP TABLE IF EXISTS techniques;")
-    cursor.execute("DROP TABLE IF EXISTS techniques_Steps;")
-    
-    cursor.execute("RENAME TABLE Techniques TO techniques;")
-    cursor.execute("RENAME TABLE Techniques_Steps TO techniques_Steps;")
+    cursor.execute("DROP TABLE IF EXISTS techniques_steps;")
+    cursor.execute("RENAME TABLE techniques_Steps TO techniques_steps;")
 
     conn.commit()
     print("Tablas renombradas y eliminadas correctamente.")

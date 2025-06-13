@@ -21,7 +21,7 @@ cursor = conn.cursor()
 try:
     
     cursor.execute("DROP TABLE IF EXISTS techniques_steps;")
-    cursor.execute("RENAME TABLE techniques_Steps TO techniques_steps;")
+    cursor.execute("DROP TABLE IF EXISTS techniques;")
 
     conn.commit()
     print("Tablas renombradas y eliminadas correctamente.")

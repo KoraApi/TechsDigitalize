@@ -44,7 +44,7 @@ try:
         url VARCHAR(225) NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-        FOREIGN KEY (technique_id) REFERENCES Techniques(id) ON DELETE CASCADE
+        FOREIGN KEY (technique_id) REFERENCES techniques(id) ON DELETE CASCADE
     )
     """)
 

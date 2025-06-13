@@ -36,7 +36,7 @@ try:
 
     # Crear la tabla 'Techniques_Steps' si no existe
     cursor.execute("""
-    CREATE TABLE IF NOT EXISTS Techniques_Steps (
+    CREATE TABLE IF NOT EXISTS techniques_steps (
         id INT PRIMARY KEY,
         technique_id INT,
         step_number INT NULL,
@@ -50,7 +50,7 @@ try:
 
     # Query de inserción para la tabla 'Techniques_Steps'
     insert_query = """
-    INSERT INTO Techniques_Steps (id, technique_id, step_number, instruction, url)
+    INSERT INTO techniques_steps (id, technique_id, step_number, instruction, url)
     VALUES (%s, %s, %s, %s, %s)
     ON DUPLICATE KEY UPDATE step_number=VALUES(step_number), instruction=VALUES(instruction), url=VALUES(url);
     """

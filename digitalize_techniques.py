@@ -36,7 +36,7 @@ try:
 
     # Crear la tabla 'Techniques' si no existe
     cursor.execute("""
-    CREATE TABLE IF NOT EXISTS Techniques (
+    CREATE TABLE IF NOT EXISTS techniques (
         id INT PRIMARY KEY,
         name VARCHAR(255),
         description TEXT,
@@ -48,7 +48,7 @@ try:
 
     # Insertar datos en la tabla 'Techniques'
     insert_query = """
-    INSERT INTO Techniques (id, name, description, type)
+    INSERT INTO techniques (id, name, description, type)
     VALUES (%s, %s, %s, %s)
     ON DUPLICATE KEY UPDATE name=VALUES(name), description=VALUES(description), type=VALUES(type);
     """
